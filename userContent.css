@@ -1,0 +1,77 @@
+/* Customize home / newtab */
+@-moz-document url("about:home"), url("about:newtab") {
+
+    /* Background image setup */
+    body::before {
+        content: "";
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: linear-gradient(rgba(25, 20, 40, 0.5), rgba(25, 20, 40, 0.8)), 
+                    url(forest-hut.jpg) center center no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        filter: brightness(0.8); /* Slightly darken background for contrast */
+
+
+    }
+      
+
+    /* Adjust search bar container for frosted-glass effect */
+    .search-inner-wrapper {
+        background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+        backdrop-filter: blur(10px); /* Frosted glass effect */
+        border-radius: 15px; /* Rounded edges */
+        padding: 10px; /* Inner padding */
+        opacity: 1; /* Ensure visibility */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Subtle shadow for depth */
+        width: fit-content;
+        margin: 0 auto; /* Center horizontally */
+    }
+
+    #newtab-search-box-input{
+        background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+        background: transparent;
+    }
+
+    /* Fix search text to appear vibrant white */
+    #newtab-search-text {
+        
+        background: transparent !important; /* Remove any background color */
+        color: white !important; /* Ensure the text is pure white */
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); /* Subtle glow for visibility */
+        filter: none; /* Remove any blurring */
+        font-size: 20px; /* Slightly larger font for prominence */
+        box-shadow: none !important;
+    }
+
+    /* Adjust Firefox logo and text alignment */
+    .logo-and-wordmark {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8)); /* Add depth */
+        margin-top: 20px; /* Adjust vertical spacing */
+    }
+
+    /* Overall layout adjustments */
+    .outer-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Center all content vertically */
+    }
+
+    .personalizeButtonWrapper{
+        display: none !important;
+    }
+
+    .search-button{
+        top: -0px !important; /* why the fuck does this center it*/
+    }
+
+
+    
+
+    
+}
